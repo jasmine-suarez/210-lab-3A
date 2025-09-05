@@ -11,7 +11,7 @@ struct Restaurant
 };
 
 Restaurant createRestaurant();
-void printRestaurant(Restaurant r);
+void printRestaurant(const Restaurant &r);
 
 int main()
 {
@@ -40,11 +40,18 @@ Restaurant createRestaurant()
     return temp;
 }
 
-void printRestaurant(Restaurant r)
+void printRestaurant(const Restaurant &r)
 {
-    cout << r.name << endl;
-    cout << r.address << endl;
-    cout << r.rating << endl;
-    cout << r.avgPrice << endl;
-    cout << r.isOpen << endl;
+    cout << endl;
+    cout << "---------- Restaurant Information ----------" << endl;
+    cout << "Name: " << r.name << endl;
+    cout << "Address: " << r.address << endl;
+    cout << "Rating: " << r.rating << endl;
+    cout << "Average Price: $" << r.avgPrice << endl;
+    cout << "Open now? ";
+    if (r.isOpen)
+        cout << "Yes";
+    else
+        cout << "No";
+    cout << endl << endl;
 }
