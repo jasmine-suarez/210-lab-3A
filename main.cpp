@@ -10,7 +10,16 @@ struct Restaurant
     bool isOpen;
 };
 
+Restaurant createRestaurant();
+
 int main()
 {
     return 0;
+}
+
+Restaurant createRestaurant()
+{
+    Restaurant temp;
+
+    return temp;
 }
