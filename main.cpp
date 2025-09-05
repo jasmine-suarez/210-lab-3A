@@ -14,12 +14,17 @@ Restaurant createRestaurant();
 
 int main()
 {
+    Restaurant test = createRestaurant();
+    cout << test.name << endl;
     return 0;
 }
 
 Restaurant createRestaurant()
 {
     Restaurant temp;
+    
+    cout << "Enter restaurant name: ";
+    getline(cin, temp.name);
 
     return temp;
 }
