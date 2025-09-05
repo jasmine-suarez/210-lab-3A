@@ -16,6 +16,11 @@ int main()
 {
     Restaurant test = createRestaurant();
     cout << test.name << endl;
+    cout << test.address << endl;
+    cout << test.rating << endl;
+    cout << test.avgPrice << endl;
+    cout << test.isOpen << endl;
+    
     return 0;
 }
 
@@ -25,6 +30,15 @@ Restaurant createRestaurant()
     
     cout << "Enter restaurant name: ";
     getline(cin, temp.name);
+    cout << "Enter restaurant address: ";
+    getline(cin, temp.address);
+    cout << "Enter rating (1-5): ";
+    cin >> temp.rating;
+    cout << "Enter average price: ";
+    cin >> temp.avgPrice;
+    cout << "Is the restaurant open? (1 = yes, 0 = no): ";
+    cin >> temp.isOpen;
+    cin.ignore();
 
     return temp;
 }
