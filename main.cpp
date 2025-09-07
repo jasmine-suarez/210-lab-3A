@@ -18,21 +18,26 @@ void printRestaurant(const Restaurant &r);
 
 int main()
 {
-    Restaurant r1 = createRestaurant();
-    Restaurant r2 = createRestaurant();
-    Restaurant r3 = createRestaurant();
-    Restaurant r4 = createRestaurant();
-    Restaurant r5 = createRestaurant();
+    const int NUM_RESTAURANTS = 5;
+    Restaurant restaurants[NUM_RESTAURANTS];
+    
+    for (int i = 0; i < NUM_RESTAURANTS; i++)
+    {
+        cout << "Enter Info for Restaurant " << (i + 1) << ":" << endl;
+        restaurants[i] = createRestaurant();
+    }
 
-    printRestaurant(r1);
-    printRestaurant(r2);
-    printRestaurant(r3);
-    printRestaurant(r4);
-    printRestaurant(r5);
+    for (int i = 0; i < NUM_RESTAURANTS; i++)
+    {
+        printRestaurant(restaurants[i]);
+    }
 
     return 0;
 }
 
+// createRestaurant() creats a temporary struct, recieves, and returns input.
+// arguments: none
+// returns: Restaurant struct with user input
 Restaurant createRestaurant()
 {
     Restaurant temp;
@@ -53,6 +58,9 @@ Restaurant createRestaurant()
     return temp;
 }
 
+// printRestaurant() prints attributes of a Restaurant struct.
+// arguments: const Restaurant &r
+// returns: void
 void printRestaurant(const Restaurant &r)
 {
     cout << endl;
