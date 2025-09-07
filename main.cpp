@@ -46,13 +46,21 @@ Restaurant createRestaurant()
     getline(cin, temp.name);
     cout << "Enter restaurant address: ";
     getline(cin, temp.address);
-    cout << "Enter rating (1-5): ";
-    cin >> temp.rating;
-    cout << "Enter average price: ";
-    cin >> temp.avgPrice;
+    
+    do
+    {
+        cout << "Enter rating (1-5): ";
+        cin >> temp.rating;
+    } while (temp.rating < 1 || temp.rating > 5);
+
+    do
+    {
+        cout << "Enter average price: ";
+        cin >> temp.avgPrice;
+    } while (temp.avgPrice < 0);
+    
     cout << "Is the restaurant open? (1 = yes, 0 = no): ";
     cin >> temp.isOpen;
-    cin.ignore();
     cout << endl;
 
     return temp;
