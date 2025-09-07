@@ -1,3 +1,6 @@
+// COMSC-210 | Lab 3A | Jasmine Suarez
+// IDE used: VS Code
+
 #include <iostream>
 using namespace std;
 
@@ -15,8 +18,17 @@ void printRestaurant(const Restaurant &r);
 
 int main()
 {
-    Restaurant r = createRestaurant();
-    printRestaurant(r);
+    Restaurant r1 = createRestaurant();
+    Restaurant r2 = createRestaurant();
+    Restaurant r3 = createRestaurant();
+    Restaurant r4 = createRestaurant();
+    Restaurant r5 = createRestaurant();
+
+    printRestaurant(r1);
+    printRestaurant(r2);
+    printRestaurant(r3);
+    printRestaurant(r4);
+    printRestaurant(r5);
 
     return 0;
 }
@@ -36,6 +48,7 @@ Restaurant createRestaurant()
     cout << "Is the restaurant open? (1 = yes, 0 = no): ";
     cin >> temp.isOpen;
     cin.ignore();
+    cout << endl;
 
     return temp;
 }
